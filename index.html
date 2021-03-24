@@ -9,21 +9,33 @@
     <script src="assets/app.js" defer></script>
   </head>
   <body>
-    <header id="heading">
-      <h1>Whac A Mole</h1>
-    </header>
-    <br />
-    <div id="game-content">
+    <div id="start">
+      <button id="startBtn">Start!</button>
+    </div>
+    <div id="game" class="invisible">
+      <div id="score">Score: 0</div>
+      <header id="heading">
+        <h1>Whac A Mole</h1>
+      </header>
+      <br />
+      <div id="game-content">
+        <div class="container">
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+          <img src="img/mole.png" alt="" class="" />
+        </div>
+      </div>
+      <div id="timer">Timer: 0</div>
+    </div>
+    <div id="end" class="invisible">
       <div class="container">
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
-        <img src="img/mole.png" alt="" class="" />
+        <h1 class="yourScore">Your Final Score: 0</h1>
       </div>
     </div>
   </body>

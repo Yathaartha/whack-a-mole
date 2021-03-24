@@ -1,6 +1,13 @@
 const moles = document.querySelectorAll("img");
+const score = document.getElementById("score");
+const timer = document.getElementById("timer");
+const start = document.getElementById("start");
+const game = document.getElementById("game");
+const end = document.getElementById("end");
+const endText = end.querySelector("h1");
+const startBtn = document.getElementById("startBtn");
 
-let score = 0;
+let moleScore = 0;
 let milisec = 0;
 let sec = 0;
 let temp = 0;
@@ -18,12 +25,20 @@ function despawnMole() {
 moles.forEach((e) => {
   e.addEventListener("click", () => {
     if (e.classList.contains("active")) {
-      score++;
+      moleScore++;
       despawnMole();
-      console.log(score);
+      updateScore();
     }
   });
 });
+
+function updateScore() {
+  score.textContent = `Score: ${moleScore}`;
+}
+
+function updateTimer() {
+  timer.textContent = `Timer: ${sec}`;
+}
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -36,11 +51,33 @@ function startTimer() {
 function timeHandler() {
   milisec++;
   if (milisec === 100) {
+    sec++;
     spawnMole();
+    updateTimer();
   }
   if (milisec === 150) {
     despawnMole();
   }
+  if (sec === 10) {
+    endGame();
+  }
 }
 
-startTimer();
+function endGame() {
+  game.classList.add("invisible");
+  end.classList.remove("invisible");
+  endText.textContent = `Your Final Score: ${moleScore}`;
+  end.addEventListener("click", () => {
+    alert("Starting over!");
+    window.location.reload();
+  });
+}
+
+function startGame() {
+  start.style.display = "none";
+  startBtn.classList.add("invisible");
+  game.classList.remove("invisible");
+  startTimer();
+}
+
+startBtn.addEventListener("click", startGame);
