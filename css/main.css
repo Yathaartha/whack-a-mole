@@ -8,8 +8,8 @@ header {
   padding-right: 50px; }
 
 body {
-  background: #fffc;
-  color: #860e1c;
+  background: #d7c0d0;
+  color: #000;
   height: 100vh;
   width: 100vw;
   font-size: 2rem;
@@ -21,7 +21,8 @@ body {
   justify-content: center; }
 
 #game-content {
-  border: solid rgba(46, 196, 182, 0.4) 2px; }
+  border: solid #011627 2px;
+  background-color: #fffc; }
   #game-content .container {
     display: grid;
     width: 600px;
@@ -39,7 +40,7 @@ body {
 
 #score {
   position: absolute;
-  border: rgba(46, 196, 182, 0.4) 2px solid;
+  border: #011627 2px solid;
   top: 1.2rem;
   left: 1.2rem;
   padding: 0.5rem 1rem;
@@ -47,7 +48,7 @@ body {
 
 #timer {
   position: absolute;
-  border: rgba(46, 196, 182, 0.4) 2px solid;
+  border: #011627 2px solid;
   bottom: 1.2rem;
   left: 1.2rem;
   padding: 0.5rem 1rem;
@@ -60,7 +61,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  flex-direction: column; }
+  #start p {
+    color: #000; }
   #start button {
     padding: 2rem;
     font-size: 6rem;
@@ -88,6 +92,6 @@ body {
     height: 100vh;
     width: 100vw; }
     #end .container h1 {
-      border: solid rgba(46, 196, 182, 0.4) 3px;
+      border: solid #011627 3px;
       border-radius: 5px;
       padding: 1rem 1.5rem; }

@@ -58,7 +58,7 @@ function timeHandler() {
   if (milisec === 150) {
     despawnMole();
   }
-  if (sec === 10) {
+  if (sec === 60) {
     endGame();
   }
 }
@@ -68,7 +68,7 @@ function endGame() {
   end.classList.remove("invisible");
   endText.textContent = `Your Final Score: ${moleScore}`;
   end.addEventListener("click", () => {
-    alert("Starting over!");
+    // alert("Starting over!");
     window.location.reload();
   });
 }
