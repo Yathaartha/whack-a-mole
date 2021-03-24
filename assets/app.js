@@ -55,7 +55,7 @@ function timeHandler() {
     spawnMole();
     updateTimer();
   }
-  if (milisec === 180) {
+  if (milisec === 165) {
     despawnMole();
   }
   if (sec === 60) {
