@@ -58,7 +58,7 @@ function timeHandler() {
   if (milisec === 165) {
     despawnMole();
   }
-  if (sec === 60) {
+  if (sec === 30) {
     endGame();
   }
 }
